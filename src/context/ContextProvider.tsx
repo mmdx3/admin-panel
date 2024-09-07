@@ -49,11 +49,9 @@ const GetThemeModeFromLocalStorage = () => {
 
 const GetColorModeFromLocalStorage = () => {
   const colorMode = JSON.parse(localStorage.getItem("colorMode")!);
-  console.log(colorMode);
-
   if (
-    colorMode !== undefined ||
-    colorMode !== null ||
+    colorMode !== undefined &&
+    colorMode !== null &&
     colorMode !== typeof null
   ) {
     return colorMode;

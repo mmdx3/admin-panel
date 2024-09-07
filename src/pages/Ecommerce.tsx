@@ -5,14 +5,14 @@ import { SparklineAreaData, earningData } from "../data/dummy";
 import SparkLine from "../components/Charts/SparkLine";
 import Stacked from "../components/Charts/Stacked";
 import { GoDotFill } from "react-icons/go";
-
+import earning from '../assets/images/earning1.jpg'
 const Ecommerce = () => {
   const { currentColor } = useStateContext();
 
   return (
     <div className="mt-12 container mx-auto">
       <div className="flex flex-col justify-center items-center">
-        <div className="bg-white dark:text-gray-200  dark:bg-secondary w-[-webkit-fill-available] m-3 h-44 xl:h-64 rounded-xl  md:w-[80%] p-8 pt-9  bg-hero-pattern bg-no-repeat bg-cover bg-left">
+        <div className="bg-white relative dark:text-gray-200 overflow-hidden z-50 dark:bg-secondary w-[-webkit-fill-available] m-3 h-44 xl:h-64 rounded-xl  md:w-[80%] p-8 pt-9  ">
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-slate-700">درآمدها</p>
@@ -28,6 +28,7 @@ const Ecommerce = () => {
               size="md"
             />
           </div>
+          <img src={earning} alt="" className="absolute top-0 left-0 w-full h-full bg-cover z-[-1] bg-no-repeat  bg-left"/>
         </div>
         <div className="md:w-[80%] flex m-3 flex-wrap justify-between gap-2 items-center">
           {earningData.map((item) => (
